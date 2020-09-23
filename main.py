@@ -49,14 +49,14 @@ for item in jobs:
   link = '-'
   for a in item.find_all('a', href=True):
     if (a['href']).startswith('/remote-jobs'):
-      link = (a['href']) 
+      link = 'https://weworkremotely.com' + (a['href']) 
   links.append(link)
 
 # extract only the link that takes user to the company overview page
   overview = '-'
   for a in item.find_all('a', href=True):
     if (a['href']).startswith('/company'):
-      overview = (a['href']) 
+      overview = 'https://weworkremotely.com' + (a['href']) 
   overviews.append(overview)
 
   img = '-'
